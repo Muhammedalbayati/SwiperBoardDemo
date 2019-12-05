@@ -1,0 +1,34 @@
+<header>Main Board</header>
+<div>{{errorMsg}}</div>
+<swiper class="swiper-container" [config]="config" >
+    <div *ngFor="let user of users" class="swiper-slide">
+        <div style=" text-align: center;">
+
+            <div class="card text-center shadow p-3 mb-5 bg-white rounded h-100 card-body">
+                <div class="card-header">
+                    {{user.userName}}
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{user.phoneNumber}} </h5>
+                    <p class="card-text">{{user.userName}}</p>
+                    <p class="card-text">{{user.userName}}</p>
+                    <p class="card-text">{{user.userName}}</p>
+                    <p class="card-text">{{user.userName}}</p>
+                    <p class="card-text">{{user.userName}}</p>
+                    <p class="card-text">{{user.userName}}</p>
+
+                </div>
+                <div class="card-footer text-muted">
+                    {{slide}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</swiper>
+<footer>
+    <div class="card text-center">Slide delay
+        <app-slider (sliderChangeValue)="sliderChange($event)"></app-slider>
+    </div> 
+     
+</footer>
